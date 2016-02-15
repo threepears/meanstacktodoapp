@@ -5,7 +5,7 @@ export default function($scope, todoFactory) {
 		createHasInput: false
 	}
 
-	$scope.todos = [
+	/*$scope.todos = [
 	{
 		task: 'do dishes',
 		isCompleted: false,
@@ -16,7 +16,9 @@ export default function($scope, todoFactory) {
 		isCompleted: true,
 		isEditing: false
 	}
-	];
+	];*/
+
+	todoFactory.getTasks($scope);
 
 	$scope.onCompletedClick = todo => {
 		todo.isCompleted = !todo.isCompleted;
@@ -35,7 +37,7 @@ export default function($scope, todoFactory) {
 
 	$scope.createTask = _.partial(createTask, $scope, params);
 
-	$scope.updateTask = _.partial(updateTask);
+	$scope.updateTask = _.partial(updateTask, $scope);
 
 	$scope.deleteTask = _.partial(deleteTask, $scope)
 

@@ -2,9 +2,15 @@
 
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+const routes = require('server/routes');
 const defaultPort = 3000;
 
 const PORT = process.env.PORT || defaultPort;
+
+app.use(bodyParser.json());
+
+routes(app);
 
 app.all('/*', (req, res) => {
   res.send('\
