@@ -35,7 +35,7 @@
     "body-parser": "^1.15.0",
     "bootstrap-sass": "^3.3.6",
     "express": "^4.13.4",
-    "jquery": "^2.2.0",
+    "jquery": "^2.2.0", // update this version past 3.0 because of security vulnerability
     "kerberos": "0.0.18",
     "lodash": "^4.3.0",
     "mongoose": "^4.4.3"
